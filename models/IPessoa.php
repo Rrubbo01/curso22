@@ -1,7 +1,7 @@
 <?php
 
-interface IPessoa
-{
+interface IPessoa{
+    
     public function salvar();
     public function obter();
     public function ObterTodas();

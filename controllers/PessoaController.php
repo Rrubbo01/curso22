@@ -1,7 +1,8 @@
 <?php
 
-class PessoaController {
+    $PessoaFisica = new PessoaFisica();
     $pessoa = new Pessoa();
+
 
     if ($_POST['cpf'] != '') {
         $pessoaFisica = new PessoaFisica();
@@ -13,5 +14,3 @@ class PessoaController {
         $pessoa->salvar($pessoaJuridica);
 
     }
-
-}
