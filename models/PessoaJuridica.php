@@ -1,9 +1,9 @@
 <?php
-class PessoaJuridica extends Pessoa{
-    public $CNPJ = "";
-    public $InscriçãoEstadual = "";
-    public $CNAE = "";
-    
 
+class Pessoa_Juridica extends Pessoa{
+
+    public $CNPJ = "";
+    public $fundation = "";
+    public $CNAE = "";
 
 }
