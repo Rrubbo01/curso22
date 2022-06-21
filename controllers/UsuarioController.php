@@ -1,82 +1,78 @@
 <?php
 
-echo "Olá mundo. <br><br>";
+$numero = [4, 2, 5, 1, 10, 100, 50, 3, 9, 12];
 
-$numero = 4;
-$resto = 0;
+function lacoWhile($numero) {
+    $i = 0;
+    $contPares = 0;
 
-$resto = $numero % 2;
-if ($resto == 0) {
-    echo "O número {$numero} é par.";
-} else {
-    echo "O número ".$numero . " é impar.";
+    while ($contPares < 5) {
+        $resto = $numero[$i] % 2;
+    
+        if ($resto == 0) {
+            $contPares++; // $contPares += 1;
+        }
+    
+        $i++;
+    }
+    
+    echo "<b>Funcao While</b>: i: {$i} contPares: {$contPares} <br><br>";
 }
 
-$soma = 0;
-$valor1 = 10;
-$valor2 = 20;
-
-$valor = $valor1 + $valor2;
-
-$soma1 = $soma + 29;
-
-$soma +=29;
-
-echo "<br><br> A soma dos números {$valor1} + {$valor2} é: <br> soma:{$soma} <br> soma1: {$soma1}.";
-
-
-
-switch($resto) {
-    case 0 : echo "O número {$numero} é par. <br>";
-        break;
-    default: echo " O número `{$número} é impar. <br>";
-        break;
-};
-
-echo "<br><br><br>Laço for.<br><br><br>";
-
-
-$resto = 0;
-$numero = [4, 2, 5, 1, 10, 100, 50, 3, 9, 12];
-$resto = $numero % 2;
-$contpares = 0;
-$i = 0;
-
-//for ($i = 0; $contpares < 5; $i++){
-//$resto = $numero[$i] % 2
-//    if ($resto == 0) {
-//    $contpares++;        
-//    }
-//}
-
-echo "Data hora início: " . date("d/m/y H:i:s");
-
-$numeros = [4, 2, 5, 1, 10, 100, 50, 3, 9, 12];
-$pares = [];
-$impares = [];
-$contpares = 0;
-$contimpares = 0;
-$tamanhoArray = count($numeros);
-
-for ($i=0; $i < $tamanhoArray; $i++) 
-{ 
+function lacoDoWhile($numero) {
+    $i = 0;
+    $contPares = 0;
+    do {
+        $resto = $numero[$i] % 2;
     
-    $resto =  $numeros[$i] % 2;
-
-    if ($resto == 0 ) { // é par
-        $pares[$i] = $numeros[$i];
-        // $pares[4, 2, ...]
-        $contpares++;
+        if ($resto == 0) {
+            $contPares++; // $contPares += 1;
+        }
     
-    } else {
-        $impares[$i] = $numeros[$i];
-        $contimpares++;
+        $i++;
+    } while ($contPares < 5);
+    
+    echo "<b>Funcao Do While</b>: i: {$i} contPares: {$contPares} <br><br>";
+}
+
+function lacoFOR($numero) {
+    $contPares = 0;
+    for ($i = 0; $contPares < 5; $i++) {
+
+        $resto = $numero[$i] % 2;
+
+        if ($resto == 0) {
+            $contPares++; // $contPares += 1;
+        }
     }
 
+    echo "<b>Funcao FOR</b>: i: {$i} contPares: {$contPares} <br><br>";
 }
 
-echo "<br>count: " . count($pares)."<br>";
-print_r($pares);
-echo "<br>pares : {$contpares}";
-//testar
 
+echo "Data hora inicio: " . date("d/m/Y H:i:s") . "<br><br>";
+
+lacoWhile($numero);
+lacoDoWhile($numero);
+lacoFOR($numero);
+
+sleep(2);
+
+echo "Data hora fim: " . date("d/m/Y H:i:s");
+
+
+
+
+
+// $soma = 0;
+// $valor1 = 10;
+// $valor2 = 20;
+
+// $soma = $valor1 + $valor2;
+
+// $soma1 = $soma + 29;
+// -
+// // $soma = $soma + 29;
+// $soma += 29;
+
+// echo "<br><br> A soma  dos numeros {$valor1} + {$valor2} é: soma:{$soma} soma1: {$soma1}.";
