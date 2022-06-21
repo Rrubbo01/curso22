@@ -1,31 +1,21 @@
 <?php
+    $pessoa_fisica = new Pessoa_Fisica();
+    $pessoa_fisica->id = 1;
+    $pessoa_fisica->CPF = "01299237029";
+    $pessoa_fisica->RG = "5099009531";
+    $pessoa_fisica->PIS = "020397804231";
+    $pessoa_fisica->gender = "MALE";
+    $pessoa_fisica->marital_status = "SINGLE";
+    $pessoa_fisica->born = "30/03/1990";
+    $pessoa_fisica->profession = "PROGRAMADOR";
+    $pessoa_fisica->schooling = "PÓS GRADUAÇÃO";
 
-    // $PessoaFisica = new PessoaFisica();
-    // $pessoa = new Pessoa();
+    $pessoa_juridica = new Pessoa_Juridica();
+    $pessoa_juridica->id = 2;
+    $pessoa_juridica->CNPJ = "08199996006230";
+    $pessoa_juridica->fundation = "01/10/2022";
+    $pessoa_juridica->CNAE = "159753";
 
-
-    // if ($_POST['cpf'] != '') {
-    //     $pessoaFisica = new PessoaFisica();
-    //     $pessoaFisica->CPF = $_POST['cpf'];
-    //     $pessoa->salvar($pessoaFisica);
-    // } else {
-    //     $pessoaJuridica = new PessoaJuridica();
-    //     $pessoaJuridica->CNPJ = $_POST['CNPJ'];
-    //     $pessoa->salvar($pessoaJuridica);
-
-    // }
-$dadosPessoa = [
-    "id" => 10,
-    "nome" => "Aviaozinho",
-    "status" => "Ativo",
-    "email" => "aviaozinho@curso.com",
-    "phone" => "54 912345678",
-    "gender" => "M",
-    "Type" => "CPF",
-    "cep" => "95707110",
-];
-header('Content - type: application/json; charset=utf-8');
-echo json_encode($dadosPessoa);
-exit();
-
-
+    $pessoa = new Pessoa();
+    $pessoa->create($pessoa_fisica);
+    $pessoa->create($pessoa_juridica);
