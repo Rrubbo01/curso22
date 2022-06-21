@@ -76,3 +76,5 @@ echo "Data hora fim: " . date("d/m/Y H:i:s");
 // $soma += 29;
 
 // echo "<br><br> A soma  dos numeros {$valor1} + {$valor2} é: soma:{$soma} soma1: {$soma1}.";
+
+
