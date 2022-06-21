@@ -1,11 +1,15 @@
 <?php
 
-interface IPessoa{
-    
-    public function salvar();
-    public function obter();
-    public function ObterTodas();
-    public function atualizar();
-    public function excluir();
-}
+interface IPessoa {
 
+    public function create($pessoa);
+
+    public function updadte($pessoa);
+
+    public function read($id);
+
+    public function read_all();
+
+    public function delete($id);
+
+}
