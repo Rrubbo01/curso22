@@ -1,8 +1,15 @@
 <?php
-class PessoaFisica extends Pessoa{
+
+class Pessoa_Fisica extends Pessoa{
+
     public $CPF = "";
-    public $Estado_Civil = "";
-    public $genero = "";
-    
+    public $RG = "";
+    public $PIS = "";
+    public $gender = "";
+    public $marital_status = "";
+    public $born = "";
+    public $profession = ""; 
+    public $schooling = "";
+
 
 }
