@@ -1,28 +1,36 @@
 <?php
+
 class Pessoa implements IPessoa{
+    
     public $id = 0;
-    public $Nome = "";
+    public $name = "";
     public $CEP = 0;
-    public $Email = "";
-    public $celular = "";
-    public $status = 0;
+    public $mail = "";
+    public $phone = 0;
+    public $socialweb = "";
+    public $status = true;
 
+    public function create($pessoa){
 
-    public function salvar($dados) {
-
+        // $sql = "Insert into {$pessoa->id}";
+        // mysqli_query($sql);
+        
     }
-    public function obter(){
 
-    }
-    public function ObterTodas(){
-
-    }
-    public function atualizar(){
-
-    }
-    public function excluir(){
+    public function updadte($pessoa){
 
     }
 
+    public function read($id){
 
+    }
+
+    public function read_all(){
+
+    }
+
+    public function delete($id){
+
+    }
+    
 }
